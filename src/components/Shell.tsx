@@ -57,6 +57,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   const [farmMenu, setFarmMenu] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
 
   // Share-link roles get a stripped view rendered by the page itself.
   return (
@@ -113,6 +114,26 @@ export default function Shell({ children }: { children: React.ReactNode }) {
 
       {/* Main */}
       <div className="flex min-w-0 flex-1 flex-col">
+        {/* Mock-up notice banner */}
+        {showBanner && (
+          <div className="flex items-start gap-2 border-b border-amber-200 bg-amber-100 px-4 py-2 text-amber-900">
+            <span className="mt-0.5 text-sm">🔎</span>
+            <p className="flex-1 text-xs leading-relaxed sm:text-sm">
+              {lang === "bn" ? (
+                <><b>এটি একটি প্রিভিউ মকআপ — চূড়ান্ত ডিজাইন নয়।</b> আসন্ন ফার্ম ম্যানেজমেন্ট সিস্টেমের একটি ধারণা দিতে তৈরি। প্রদর্শিত সব তথ্য নমুনা।</>
+              ) : (
+                <><b>This is a preview mock-up — not the final design.</b> It&apos;s a UI concept made to give a taste of the upcoming Farm Management System. All data shown is sample data.</>
+              )}
+            </p>
+            <button
+              onClick={() => setShowBanner(false)}
+              className="rounded-md px-1.5 py-0.5 text-amber-700 hover:bg-amber-200"
+              title={lang === "bn" ? "বন্ধ করুন" : "Dismiss"}
+            >
+              ✕
+            </button>
+          </div>
+        )}
         {/* Header */}
         <header className="sticky top-0 z-10 flex flex-wrap items-center gap-2 border-b border-stone-200 bg-white/90 px-4 py-2.5 backdrop-blur">
           <button className="btn-ghost lg:hidden" onClick={() => setMobileNav(true)}>☰</button>

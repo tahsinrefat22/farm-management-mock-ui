@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#14532d"/>
+  <!-- ears -->
+  <ellipse cx="16" cy="27" rx="8" ry="5.4" fill="#ffffff" transform="rotate(-28 16 27)"/>
+  <ellipse cx="48" cy="27" rx="8" ry="5.4" fill="#ffffff" transform="rotate(28 48 27)"/>
+  <!-- horns -->
+  <path d="M23 17c-3-4-1-8 2-8 0 3 0 5 1 7z" fill="#fde68a"/>
+  <path d="M41 17c3-4 1-8-2-8 0 3 0 5-1 7z" fill="#fde68a"/>
+  <!-- head -->
+  <rect x="18" y="19" width="28" height="27" rx="13" fill="#ffffff"/>
+  <!-- muzzle -->
+  <ellipse cx="32" cy="40" rx="11" ry="8" fill="#f6d3c8"/>
+  <!-- eyes -->
+  <circle cx="26" cy="30" r="2.6" fill="#14532d"/>
+  <circle cx="38" cy="30" r="2.6" fill="#14532d"/>
+  <!-- nostrils -->
+  <ellipse cx="28.4" cy="40.5" rx="1.7" ry="2.3" fill="#a15c4e"/>
+  <ellipse cx="35.6" cy="40.5" rx="1.7" ry="2.3" fill="#a15c4e"/>
+</svg>
